@@ -12,11 +12,8 @@ function Get-Combination {
     #e.g. 'B','C','D','E','E' would become 'B','C','D','E'
     $Array = $Array | Select-Object -Unique
 
-    #create an array to store output
-    $l = @()
-
     #for any set of length n the maximum number of subsets is 2^n
-    for ($i = 0; $i -lt [Math]::Pow(2,$Array.Length); $i++)
+  ` for ($i = 0; $i -lt [Math]::Pow(2,$Array.Length); $i++)
     { 
         #temporary array to hold output
         [string[]]$out = New-Object string[] $Array.length
@@ -31,10 +28,15 @@ function Get-Combination {
             }
         }
         #stick subset into an array
-        $l += -join $out
+        #$l += -join $out
+        $output = [PSCustomObject]@{
+            Combination = $out.Where({ $null -ne $_ })
+            Iteration = $i
+        }
+        Write-Output $output
     }
     #group the subsets by length, iterate through them and sort
-    $output = $l | Group-Object -Property Length | ForEach-Object {$_.Group | Sort-Object}
+    #$output = $l | Group-Object -Property Length | ForEach-Object {$_.Group | Sort-Object}
 
-    Write-Output $output
+    
 }
