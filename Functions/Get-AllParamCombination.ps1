@@ -27,6 +27,7 @@ function Get-AllParamCombination {
 		Write-Verbose "Starting: $($MyInvocation.MyCommand.Name)$expandedParams"
 
         $advancedParams = 'Verbose','Debug','ErrorAction','WarningAction','InformationAction','ErrorVariable','WarningVariable','InformationVariable','OutVariable','OutBuffer','PipelineVariable'
+		. .\Functions\Get-Combination.ps1
 
 	}
 	
