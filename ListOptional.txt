@@ -1,0 +1,8 @@
+SubscriptionId
+Action
+CorrelationId
+IsInitiatingOperation
+IsLatest
+IsNonTerminal
+Type
+DefaultProfile

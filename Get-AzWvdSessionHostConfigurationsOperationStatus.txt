@@ -1,0 +1,71 @@
+
+        Context "Testing parameter Set List" {
+            BeforeAll {}
+            BeforeEach {}
+            AfterAll {}
+            AfterEach {}
+
+            It 'Testing parameter MinumimMandatory from List' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName -ErrorAction Stop
+            }
+
+            It 'Testing parameter SubscriptionId from List' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName -SubscriptionId $SubscriptionId -ErrorAction Stop
+            }
+
+            It 'Testing parameter IsLatest from List' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName -IsLatest -ErrorAction Stop
+            (Get-AzWvdSessionHostManagement -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName).IsLatest | Should -Be $IsLatest
+            }
+
+            It 'Testing parameter IsNonTerminal from List' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName -IsNonTerminal -ErrorAction Stop
+            (Get-AzWvdSessionHostManagement -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName).IsNonTerminal | Should -Be $IsNonTerminal
+            }
+
+            It 'Testing parameter AllOptional from List' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName -SubscriptionId $SubscriptionId -IsLatest -IsNonTerminal -ErrorAction Stop
+            (Get-AzWvdSessionHostManagement -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName).ProvisioningState | Should -Be 'Default'
+            }
+}
+            
+
+        Context "Testing parameter Set Get" {
+            BeforeAll {}
+            BeforeEach {}
+            AfterAll {}
+            AfterEach {}
+
+            It 'Testing parameter MinumimMandatory from Get' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -HostPoolName $HostPoolName -OperationId $OperationId -ResourceGroupName $ResourceGroupName -ErrorAction Stop
+            (Get-AzWvdSessionHostManagement -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName).ProvisioningState | Should -Be 'Default'
+            }
+
+            It 'Testing parameter SubscriptionId from Get' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -HostPoolName $HostPoolName -OperationId $OperationId -ResourceGroupName $ResourceGroupName -SubscriptionId $SubscriptionId -ErrorAction Stop
+            (Get-AzWvdSessionHostManagement -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName).ProvisioningState | Should -Be 'Default'
+            }
+
+            It 'Testing parameter AllOptional from Get' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -HostPoolName $HostPoolName -OperationId $OperationId -ResourceGroupName $ResourceGroupName -SubscriptionId $SubscriptionId -ErrorAction Stop
+            (Get-AzWvdSessionHostManagement -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName).ProvisioningState | Should -Be 'Default'
+            }
+}
+            
+
+        Context "Testing parameter Set GetViaIdentity" {
+            BeforeAll {}
+            BeforeEach {}
+            AfterAll {}
+            AfterEach {}
+
+            It 'Testing parameter MinumimMandatory from GetViaIdentity' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -InputObject $InputObject -ErrorAction Stop
+            (Get-AzWvdSessionHostManagement -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName).ProvisioningState | Should -Be 'Default'
+            }
+
+            It 'Testing parameter AllOptional from GetViaIdentity' {
+            Get-AzWvdSessionHostConfigurationsOperationStatus -InputObject $InputObject -ErrorAction Stop
+            (Get-AzWvdSessionHostManagement -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName).ProvisioningState | Should -Be 'Default'
+            }
+}

@@ -15,7 +15,6 @@ function Get-AllParamCombination {
 	param(
 		[Parameter(Position = 0,
 			Mandatory = $true,
-			ValuefromPipeline = $true,
 			ValuefromPipelineByPropertyName = $true)]
 		[System.String]$Name,
 
@@ -25,11 +24,16 @@ function Get-AllParamCombination {
 
 		[Parameter(
 			ValuefromPipelineByPropertyName = $true)]
-		[Switch]$WriteItBlock,
+		[String[]]$FakeMandatoryParameterName,
 
 		[Parameter(
 			ValuefromPipelineByPropertyName = $true)]
-		[String[]]$FakeMandatoryParameterName
+		[String[]]$ExcludeParameters,
+
+		[Parameter(
+			ValuefromPipeline = $true
+		)]
+		[PSObject[]]$FakeParameterSet
 	)
 	
 	begin {
@@ -38,16 +42,17 @@ function Get-AllParamCombination {
 		$PSBoundParameters.GetEnumerator() | ForEach-Object { $expandedParams += ' -' + $_.key + ' '; $expandedParams += $_.value }
 		Write-Verbose "Starting: $($MyInvocation.MyCommand.Name)$expandedParams"
 
-		$advancedParams = 'Verbose', 'Debug', 'ErrorAction', 'WarningAction', 'InformationAction', 'ErrorVariable', 'WarningVariable', 'InformationVariable', 'OutVariable', 'OutBuffer', 'PipelineVariable', 'Confirm'
+		$advancedParams = 'Verbose', 'Debug', 'ErrorAction', 'WarningAction', 'ProgressAction', 'InformationAction', 'ErrorVariable', 'WarningVariable', 'InformationVariable', 'OutVariable', 'OutBuffer', 'PipelineVariable', 'Confirm'
 		if ($ExcludeBadAzureParameters) {
 			$badAzureParameters = 'Break', 'HttpPipelineAppend', 'HttpPipelinePrepend', 'NoWait', 'Proxy', 'ProxyCredential', 'ProxyUseDefaultCredentials'
 			$advancedParams += $badAzureParameters
 		}
-		#. .\Functions\Get-Combination.ps1
-
+		$advancedParams += $ExcludeParameters
 	}
 	
 	process {
+
+		$argumentCompleter = Get-Content 'D:\GitHub\Pester.SessionHostUpdate\FakeParamSetData\parameterValues.json' | ConvertFrom-Json
 		try {
 			$functionData = Get-Command $Name -ErrorAction Stop
 		}
@@ -55,12 +60,19 @@ function Get-AllParamCombination {
 			Write-Error "Can not find command $name"
 		}
 
-		foreach ($set in $functionData.ParameterSets) {
+		$sets = $functionData.ParameterSets
+		foreach ($fakeSet in $FakeParameterSet) {
+			$sets += $fakeSet
+		}
+		$mandatoryParams = $null
+		$optionalParams = $null
+		foreach ($set in $sets) {
+			$setName = $set.Name
 			$params = $set.Parameters | Where-Object { $_.Name -notin $advancedParams }
 
-			$mandatoryParams = $params | Where-Object { $_.IsMandatory -eq $true -or $_.Name -in $FakeMandatoryParameterName }
+			$mandatoryParams = $params | Where-Object { $_.IsMandatory -eq $true }
 
-			$optionalParams = $params | Where-Object { $_.IsMandatory -ne $true -and $_.Name -notin $FakeMandatoryParameterName }
+			$optionalParams = $params | Where-Object { $_.IsMandatory -ne $true }
 
 			$mandatoryString = $null
 
@@ -75,15 +87,15 @@ function Get-AllParamCombination {
 			
 			foreach ($param in $mandatoryParams) {
 
-				if ($param.ParameterType.ToString() -notlike "*Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization*" ) {
+				if ($param.ParameterType.ToString() -notlike "*Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support*" ) {
 					continue
 				}
 				$outputMandatory = [PSCustomObject]@{
-					PSTypeName      = 'Param.Info'
-					ParameterName   = $param.Name
-					ParameterValues = $param.ParameterType.DeclaredFields.Name | Select-Object -Skip 1
-					Invocation      = $Name + $mandatoryString
-
+					PSTypeName       = 'Param.Info'
+					ParameterSetName = $setName 
+					ParameterName    = $param.Name
+					ParameterValues  = $argumentCompleter | Where-Object Name -eq $param.Name | Select-Object -ExpandProperty Values
+					Invocation       = $Name + $mandatoryString
 				}
 
 				Write-Output $outputMandatory
@@ -92,15 +104,18 @@ function Get-AllParamCombination {
 
 			if ($outputMinMandatoryCommand) {
 				$outputMinMandatory = [PSCustomObject]@{
-					PSTypeName      = 'Param.Info'
-					ParameterName   = $null
-					ParameterValues = $null
-					Invocation      = $Name + $mandatoryString
+					PSTypeName       = 'Param.Info'
+					ParameterSetName = $setName
+					ParameterName    = 'MinumimMandatory'
+					ParameterValues  = $null
+					Invocation       = $Name + $mandatoryString
 				}
 
 				Write-Output $outputMinMandatory
 				$outputMinMandatoryCommand = $false
 			}
+
+			$optionalAll = $null
 
 			foreach ($optionalParam in $optionalParams) {
 				$parameterValues = $null
@@ -111,27 +126,41 @@ function Get-AllParamCombination {
 					$parameterData = ' $' + $optionalParam.Name
 				}
 
-				if ($optionalParam.ParameterType.ToString() -like "*Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization*" ) {
-					$parameterValues = $optionalParam.ParameterType.DeclaredFields.Name | Select-Object -Skip 1
+				if ($optionalParam.ParameterType.ToString() -like "*Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support*" ) {
+					$parameterValues = $argumentCompleter | Where-Object Name -eq $optionalparam.Name | Select-Object -ExpandProperty Values
 				}
 				else {
 					$parameterValues = $null
 				}
 
+				$optionalDetail = ' -' + $optionalParam.Name + $parameterData
+
+				if ($optionalParam.Name -notin 'WhatIf', 'AsJob') {
+					$optionalAll += $optionalDetail
+				}
+
 				$outputOptional = [PSCustomObject]@{
-					PSTypeName      = 'Param.Info'
-					ParameterName   = $optionalParam.Name
-					ParameterValues = $parameterValues
-					Invocation      = $Name + $mandatoryString + ' -' + $optionalParam.Name + $parameterData
+					PSTypeName       = 'Param.Info'
+					ParameterSetName = $setName
+					ParameterName    = $optionalParam.Name
+					ParameterValues  = $parameterValues
+					Invocation       = $Name + $mandatoryString + $optionalDetail
 				}
 
 				Write-Output $outputOptional
-				Write-Information 'Done'
+				
 			}
+			$outputOptionalAll = [PSCustomObject]@{
+				PSTypeName       = 'Param.Info'
+				ParameterSetName = $setName
+				ParameterName    = 'AllOptional'
+				ParameterValues  = $null
+				Invocation       = $Name + $mandatoryString + $optionalAll
+			}
+
+			Write-Output $outputOptionalAll
+			Write-Information 'Done'
 		}
 	}
 	end {}
 }
-
-
-'New-AzWvdSessionHostConfiguration' | Get-AllParamCombination -ExcludeBadAzureParameters | New-PesterItTest

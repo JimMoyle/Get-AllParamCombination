@@ -1,0 +1,3 @@
+HostPoolName
+OperationId
+ResourceGroupName

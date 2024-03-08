@@ -1,0 +1,668 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.Azure.Commands.Common.Authentication.Models.AzureRmProfile</T>
+      <T>System.Object</T>
+    </TN>
+    <ToString>{_x000D__x000A_  "DefaultContextKey": "Default",_x000D__x000A_  "EnvironmentTable": {_x000D__x000A_    "AzureChinaCloud": {_x000D__x000A_      "Name": "AzureChinaCloud",_x000D__x000A_      "Type": "Built-in",_x000D__x000A_      "OnPremise": false,_x000D__x000A_      "ServiceManagementUrl": "https://management.core.chinacloudapi.cn/",_x000D__x000A_      "ResourceManagerUrl": "https://management.chinacloudapi.cn/",_x000D__x000A_      "ManagementPortalUrl": "https://portal.azure.cn/",_x000D__x000A_      "PublishSettingsFileUrl": "https://go.microsoft.com/fwlink/?LinkID=301776",_x000D__x000A_      "ActiveDirectoryAuthority": "https://login.chinacloudapi.cn/",_x000D__x000A_      "GalleryUrl": "https://gallery.azure.com/",_x000D__x000A_      "GraphUrl": "https://graph.chinacloudapi.cn/",_x000D__x000A_      "ActiveDirectoryServiceEndpointResourceId": "https://management.core.chinacloudapi.cn/",_x000D__x000A_      "StorageEndpointSuffix": "core.chinacloudapi.cn",_x000D__x000A_      "SqlDatabaseDnsSuffix": ".database.chinacloudapi.cn",_x000D__x000A_      "TrafficManagerDnsSuffix": "trafficmanager.cn",_x000D__x000A_      "AzureKeyVaultDnsSuffix": "vault.azure.cn",_x000D__x000A_      "AzureKeyVaultServiceEndpointResourceId": "https://vault.azure.cn",_x000D__x000A_      "GraphEndpointResourceId": "https://graph.chinacloudapi.cn/",_x000D__x000A_      "DataLakeEndpointResourceId": null,_x000D__x000A_      "BatchEndpointResourceId": "https://batch.chinacloudapi.cn/",_x000D__x000A_      "AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix": null,_x000D__x000A_      "AzureDataLakeStoreFileSystemEndpointSuffix": null,_x000D__x000A_      "AdTenant": "Common",_x000D__x000A_      "ContainerRegistryEndpointSuffix": "azurecr.cn",_x000D__x000A_      "VersionProfiles": [],_x000D__x000A_      "ExtendedProperties": {_x000D__x000A_        "OperationalInsightsEndpoint": "https://api.loganalytics.azure.cn/v1",_x000D__x000A_        "AzureSynapseAnalyticsEndpointSuffix": "dev.azuresynapse.azure.cn",_x000D__x000A_        "AzureAnalysisServicesEndpointSuffix": "asazure.chinacloudapi.cn",_x000D__x000A_        "MicrosoftGraphEndpointResourceId": "https://microsoftgraph.chinacloudapi.cn/",_x000D__x000A_        "ManagedHsmServiceEndpointSuffix": "managedhsm.azure.cn",_x000D__x000A_        "OperationalInsightsEndpointResourceId": "https://api.loganalytics.azure.cn",_x000D__x000A_        "AnalysisServicesEndpointResourceId": "https://region.asazure.chinacloudapi.cn",_x000D__x000A_        "ManagedHsmServiceEndpointResourceId": "https://managedhsm.azure.cn",_x000D__x000A_        "AzureSynapseAnalyticsEndpointResourceId": "https://dev.azuresynapse.azure.cn",_x000D__x000A_        "MicrosoftGraphUrl": "https://microsoftgraph.chinacloudapi.cn",_x000D__x000A_        "ContainerRegistryEndpointResourceId": "https://management.chinacloudapi.cn"_x000D__x000A_      }_x000D__x000A_    },_x000D__x000A_    "AzureCloud": {_x000D__x000A_      "Name": "AzureCloud",_x000D__x000A_      "Type": "Discovered",_x000D__x000A_      "OnPremise": false,_x000D__x000A_      "ServiceManagementUrl": "https://management.core.windows.net/",_x000D__x000A_      "ResourceManagerUrl": "https://management.azure.com/",_x000D__x000A_      "ManagementPortalUrl": "https://portal.azure.com",_x000D__x000A_      "PublishSettingsFileUrl": "https://go.microsoft.com/fwlink/?LinkID=301775",_x000D__x000A_      "ActiveDirectoryAuthority": "https://login.microsoftonline.com",_x000D__x000A_      "GalleryUrl": null,_x000D__x000A_      "GraphUrl": "https://graph.windows.net/",_x000D__x000A_      "ActiveDirectoryServiceEndpointResourceId": "https://management.core.windows.net/",_x000D__x000A_      "StorageEndpointSuffix": "core.windows.net",_x000D__x000A_      "SqlDatabaseDnsSuffix": ".database.windows.net",_x000D__x000A_      "TrafficManagerDnsSuffix": "trafficmanager.net",_x000D__x000A_      "AzureKeyVaultDnsSuffix": "vault.azure.net",_x000D__x000A_      "AzureKeyVaultServiceEndpointResourceId": "https://vault.azure.net",_x000D__x000A_      "GraphEndpointResourceId": "https://graph.windows.net/",_x000D__x000A_      "DataLakeEndpointResourceId": "https://datalake.azure.net/",_x000D__x000A_      "BatchEndpointResourceId": "https://batch.core.windows.net/",_x000D__x000A_      "AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix": "azuredatalakeanalytics.net",_x000D__x000A_      "AzureDataLakeStoreFileSystemEndpointSuffix": "azuredatalakestore.net",_x000D__x000A_      "AdTenant": "common",_x000D__x000A_      "ContainerRegistryEndpointSuffix": "azurecr.io",_x000D__x000A_      "VersionProfiles": [],_x000D__x000A_      "ExtendedProperties": {_x000D__x000A_        "ManagedHsmServiceEndpointResourceId": "https://managedhsm.azure.net",_x000D__x000A_        "ContainerRegistryEndpointResourceId": "https://management.azure.com",_x000D__x000A_        "AzureAppConfigurationEndpointResourceId": "https://azconfig.io",_x000D__x000A_        "AzurePurviewEndpointSuffix": "purview.azure.net",_x000D__x000A_        "ManagedHsmServiceEndpointSuffix": "managedhsm.azure.net",_x000D__x000A_        "MicrosoftGraphUrl": "https://graph.microsoft.com",_x000D__x000A_        "AzureAttestationServiceEndpointSuffix": "attest.azure.net",_x000D__x000A_        "AzureSynapseAnalyticsEndpointSuffix": "dev.azuresynapse.net",_x000D__x000A_        "AzureAnalysisServicesEndpointSuffix": "asazure.windows.net",_x000D__x000A_        "AzureSynapseAnalyticsEndpointResourceId": "https://dev.azuresynapse.net",_x000D__x000A_        "OperationalInsightsEndpointResourceId": "https://api.loganalytics.io",_x000D__x000A_        "AnalysisServicesEndpointResourceId": "https://region.asazure.windows.net",_x000D__x000A_        "AzurePurviewEndpointResourceId": "https://purview.azure.net",_x000D__x000A_        "AzureAppConfigurationEndpointSuffix": "azconfig.io",_x000D__x000A_        "AzureAttestationServiceEndpointResourceId": "https://attest.azure.net",_x000D__x000A_        "MicrosoftGraphEndpointResourceId": "https://graph.microsoft.com/",_x000D__x000A_        "OperationalInsightsEndpoint": "https://api.loganalytics.io/v1"_x000D__x000A_      }_x000D__x000A_    },_x000D__x000A_    "AzureUSGovernment": {_x000D__x000A_      "Name": "AzureUSGovernment",_x000D__x000A_      "Type": "Built-in",_x000D__x000A_      "OnPremise": false,_x000D__x000A_      "ServiceManagementUrl": "https://management.core.usgovcloudapi.net/",_x000D__x000A_      "ResourceManagerUrl": "https://management.usgovcloudapi.net/",_x000D__x000A_      "ManagementPortalUrl": "https://portal.azure.us/",_x000D__x000A_      "PublishSettingsFileUrl": "https://manage.windowsazure.us/publishsettings/index",_x000D__x000A_      "ActiveDirectoryAuthority": "https://login.microsoftonline.us/",_x000D__x000A_      "GalleryUrl": "https://gallery.azure.com/",_x000D__x000A_      "GraphUrl": "https://graph.windows.net/",_x000D__x000A_      "ActiveDirectoryServiceEndpointResourceId": "https://management.core.usgovcloudapi.net/",_x000D__x000A_      "StorageEndpointSuffix": "core.usgovcloudapi.net",_x000D__x000A_      "SqlDatabaseDnsSuffix": ".database.usgovcloudapi.net",_x000D__x000A_      "TrafficManagerDnsSuffix": "usgovtrafficmanager.net",_x000D__x000A_      "AzureKeyVaultDnsSuffix": "vault.usgovcloudapi.net",_x000D__x000A_      "AzureKeyVaultServiceEndpointResourceId": "https://vault.usgovcloudapi.net",_x000D__x000A_      "GraphEndpointResourceId": "https://graph.windows.net/",_x000D__x000A_      "DataLakeEndpointResourceId": null,_x000D__x000A_      "BatchEndpointResourceId": "https://batch.core.usgovcloudapi.net/",_x000D__x000A_      "AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix": null,_x000D__x000A_      "AzureDataLakeStoreFileSystemEndpointSuffix": null,_x000D__x000A_      "AdTenant": "Common",_x000D__x000A_      "ContainerRegistryEndpointSuffix": "azurecr.us",_x000D__x000A_      "VersionProfiles": [],_x000D__x000A_      "ExtendedProperties": {_x000D__x000A_        "OperationalInsightsEndpoint": "https://api.loganalytics.us/v1",_x000D__x000A_        "AzureSynapseAnalyticsEndpointSuffix": "dev.azuresynapse.usgovcloudapi.net",_x000D__x000A_        "AzureAnalysisServicesEndpointSuffix": "asazure.usgovcloudapi.net",_x000D__x000A_        "MicrosoftGraphEndpointResourceId": "https://graph.microsoft.us/",_x000D__x000A_        "ManagedHsmServiceEndpointSuffix": "managedhsm.usgovcloudapi.net",_x000D__x000A_        "OperationalInsightsEndpointResourceId": "https://api.loganalytics.us",_x000D__x000A_        "AnalysisServicesEndpointResourceId": "https://region.asazure.usgovcloudapi.net",_x000D__x000A_        "ManagedHsmServiceEndpointResourceId": "https://managedhsm.usgovcloudapi.net",_x000D__x000A_        "AzureSynapseAnalyticsEndpointResourceId": "https://dev.azuresynapse.usgovcloudapi.net",_x000D__x000A_        "MicrosoftGraphUrl": "https://graph.microsoft.us",_x000D__x000A_        "ContainerRegistryEndpointResourceId": "https://management.usgovcloudapi.net"_x000D__x000A_      }_x000D__x000A_    }_x000D__x000A_  },_x000D__x000A_  "Contexts": {_x000D__x000A_    "Default": {_x000D__x000A_      "Name": "Microsoft Azure (d2cd2b8a-6d8f-4e4b-85ec-ef98cb93cc76) - 8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3 - JimAdmin@WVDInt.onmicrosoft.com",_x000D__x000A_      "Subscription": {_x000D__x000A_        "Name": "Microsoft Azure",_x000D__x000A_        "Id": "d2cd2b8a-6d8f-4e4b-85ec-ef98cb93cc76",_x000D__x000A_        "State": "Enabled",_x000D__x000A_        "SubscriptionId": "d2cd2b8a-6d8f-4e4b-85ec-ef98cb93cc76",_x000D__x000A_        "TenantId": "8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3",_x000D__x000A_        "HomeTenantId": "8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3",_x000D__x000A_        "ManagedByTenantIds": [],_x000D__x000A_        "CurrentStorageAccountName": null,_x000D__x000A_        "SubscriptionPolicies": {_x000D__x000A_          "LocationPlacementId": "Public_2014-09-01",_x000D__x000A_          "QuotaId": "CSP_2015-05-01",_x000D__x000A_          "SpendingLimit": "Off"_x000D__x000A_        },_x000D__x000A_        "ExtendedProperties": {_x000D__x000A_          "SubscriptionPolices": "{\"locationPlacementId\":\"Public_2014-09-01\",\"quotaId\":\"CSP_2015-05-01\",\"spendingLimit\":\"Off\"}",_x000D__x000A_          "AuthorizationSource": "RoleBased",_x000D__x000A_          "HomeTenant": "8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3",_x000D__x000A_          "Environment": "AzureCloud",_x000D__x000A_          "Tenants": "8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3",_x000D__x000A_          "Account": "JimAdmin@WVDInt.onmicrosoft.com"_x000D__x000A_        },_x000D__x000A_        "CurrentStorageAccount": null,_x000D__x000A_        "AuthorizationSource": "RoleBased",_x000D__x000A_        "Tags": null_x000D__x000A_      },_x000D__x000A_      "Account": {_x000D__x000A_        "Id": "JimAdmin@WVDInt.onmicrosoft.com",_x000D__x000A_        "Type": "User",_x000D__x000A_        "Tenants": [_x000D__x000A_          "8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3"_x000D__x000A_        ],_x000D__x000A_        "AccessToken": null,_x000D__x000A_        "Credential": null,_x000D__x000A_        "TenantMap": {},_x000D__x000A_        "CertificateThumbprint": null,_x000D__x000A_        "ExtendedProperties": {_x000D__x000A_          "Tenants": "8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3",_x000D__x000A_          "HomeAccountId": "5933f20c-5691-42f6-af3e-3211348d47dc.8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3",_x000D__x000A_          "Subscriptions": "d2cd2b8a-6d8f-4e4b-85ec-ef98cb93cc76"_x000D__x000A_        }_x000D__x000A_      },_x000D__x000A_      "Environment": {_x000D__x000A_        "Name": "AzureCloud",_x000D__x000A_        "Type": "User-defined",_x000D__x000A_        "EnableAdfsAuthentication": false,_x000D__x000A_        "OnPremise": false,_x000D__x000A_        "ActiveDirectoryServiceEndpointResourceId": "https://management.core.windows.net/",_x000D__x000A_        "AdTenant": "common",_x000D__x000A_        "GalleryUrl": "https://gallery.azure.com/",_x000D__x000A_        "ManagementPortalUrl": "https://portal.azure.com",_x000D__x000A_        "ServiceManagementUrl": "https://management.core.windows.net/",_x000D__x000A_        "PublishSettingsFileUrl": "https://go.microsoft.com/fwlink/?LinkID=301775",_x000D__x000A_        "ResourceManagerUrl": "https://management.azure.com/",_x000D__x000A_        "SqlDatabaseDnsSuffix": ".database.windows.net",_x000D__x000A_        "StorageEndpointSuffix": "core.windows.net",_x000D__x000A_        "ActiveDirectoryAuthority": "https://login.microsoftonline.com",_x000D__x000A_        "GraphUrl": "https://graph.windows.net/",_x000D__x000A_        "GraphEndpointResourceId": "https://graph.windows.net/",_x000D__x000A_        "TrafficManagerDnsSuffix": "trafficmanager.net",_x000D__x000A_        "AzureKeyVaultDnsSuffix": "vault.azure.net",_x000D__x000A_        "DataLakeEndpointResourceId": "https://datalake.azure.net/",_x000D__x000A_        "AzureDataLakeStoreFileSystemEndpointSuffix": "azuredatalakestore.net",_x000D__x000A_        "AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix": "azuredatalakeanalytics.net",_x000D__x000A_        "AzureKeyVaultServiceEndpointResourceId": "https://vault.azure.net",_x000D__x000A_        "ContainerRegistryEndpointSuffix": "azurecr.io",_x000D__x000A_        "AzureOperationalInsightsEndpointResourceId": "https://api.loganalytics.io",_x000D__x000A_        "AzureOperationalInsightsEndpoint": "https://api.loganalytics.io/v1",_x000D__x000A_        "AzureAnalysisServicesEndpointSuffix": "asazure.windows.net",_x000D__x000A_        "AnalysisServicesEndpointResourceId": "https://region.asazure.windows.net",_x000D__x000A_        "AzureAttestationServiceEndpointSuffix": "attest.azure.net",_x000D__x000A_        "AzureAttestationServiceEndpointResourceId": "https://attest.azure.net",_x000D__x000A_        "AzureSynapseAnalyticsEndpointSuffix": "dev.azuresynapse.net",_x000D__x000A_        "AzureSynapseAnalyticsEndpointResourceId": "https://dev.azuresynapse.net",_x000D__x000A_        "VersionProfiles": [],_x000D__x000A_        "ExtendedProperties": {_x000D__x000A_          "ManagedHsmServiceEndpointResourceId": "https://managedhsm.azure.net",_x000D__x000A_          "ContainerRegistryEndpointResourceId": "https://management.azure.com",_x000D__x000A_          "AzureAppConfigurationEndpointResourceId": "https://azconfig.io",_x000D__x000A_          "AzurePurviewEndpointSuffix": "purview.azure.net",_x000D__x000A_          "ManagedHsmServiceEndpointSuffix": "managedhsm.azure.net",_x000D__x000A_          "MicrosoftGraphUrl": "https://graph.microsoft.com",_x000D__x000A_          "AzureAttestationServiceEndpointSuffix": "attest.azure.net",_x000D__x000A_          "AzureSynapseAnalyticsEndpointSuffix": "dev.azuresynapse.net",_x000D__x000A_          "AzureAnalysisServicesEndpointSuffix": "asazure.windows.net",_x000D__x000A_          "AzureSynapseAnalyticsEndpointResourceId": "https://dev.azuresynapse.net",_x000D__x000A_          "OperationalInsightsEndpointResourceId": "https://api.loganalytics.io",_x000D__x000A_          "AnalysisServicesEndpointResourceId": "https://region.asazure.windows.net",_x000D__x000A_          "AzurePurviewEndpointResourceId": "https://purview.azure.net",_x000D__x000A_          "AzureAppConfigurationEndpointSuffix": "azconfig.io",_x000D__x000A_          "AzureAttestationServiceEndpointResourceId": "https://attest.azure.net",_x000D__x000A_          "MicrosoftGraphEndpointResourceId": "https://graph.microsoft.com/",_x000D__x000A_          "OperationalInsightsEndpoint": "https://api.loganalytics.io/v1"_x000D__x000A_        },_x000D__x000A_        "BatchEndpointResourceId": "https://batch.core.windows.net/"_x000D__x000A_      },_x000D__x000A_      "Tenant": {_x000D__x000A_        "Id": "8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3",_x000D__x000A_        "TenantId": "8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3",_x000D__x000A_        "ExtendedProperties": {_x000D__x000A_          "TenantCategory": "Home",_x000D__x000A_          "CountryCode": "US",_x000D__x000A_          "DisplayName": "WVDInt",_x000D__x000A_          "DefaultDomain": "avd.tools",_x000D__x000A_          "Domains": "WVDInt.mail.onmicrosoft.com,WVDInt.onmicrosoft.com,avd.tools",_x000D__x000A_          "TenantType": "AAD",_x000D__x000A_          "Directory": "WVDInt.onmicrosoft.com"_x000D__x000A_        },_x000D__x000A_        "TenantCategory": "Home",_x000D__x000A_        "Country": null,_x000D__x000A_        "CountryCode": "US",_x000D__x000A_        "Name": "WVDInt",_x000D__x000A_        "Domains": [_x000D__x000A_          "WVDInt.mail.onmicrosoft.com",_x000D__x000A_          "WVDInt.onmicrosoft.com",_x000D__x000A_          "avd.tools"_x000D__x000A_        ],_x000D__x000A_        "DefaultDomain": "avd.tools",_x000D__x000A_        "TenantType": "AAD",_x000D__x000A_        "TenantBrandingLogoUrl": null_x000D__x000A_      },_x000D__x000A_      "TokenCache": null,_x000D__x000A_      "VersionProfile": null,_x000D__x000A_      "ExtendedProperties": {}_x000D__x000A_    }_x000D__x000A_  },_x000D__x000A_  "ExtendedProperties": {}_x000D__x000A_}</ToString>
+    <Props>
+      <S N="DefaultContextKey">Default</S>
+      <Obj N="EnvironmentTable" RefId="1">
+        <TN RefId="1">
+          <T>System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureEnvironment, Microsoft.Azure.PowerShell.Authentication.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">AzureChinaCloud</S>
+            <Obj N="Value" RefId="2">
+              <TN RefId="2">
+                <T>Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureEnvironment</T>
+                <T>System.Object</T>
+              </TN>
+              <ToString>Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureEnvironment</ToString>
+              <Props>
+                <S N="Name">AzureChinaCloud</S>
+                <S N="Type">Built-in</S>
+                <B N="OnPremise">false</B>
+                <S N="ServiceManagementUrl">https://management.core.chinacloudapi.cn/</S>
+                <S N="ResourceManagerUrl">https://management.chinacloudapi.cn/</S>
+                <S N="ManagementPortalUrl">https://portal.azure.cn/</S>
+                <S N="PublishSettingsFileUrl">https://go.microsoft.com/fwlink/?LinkID=301776</S>
+                <S N="ActiveDirectoryAuthority">https://login.chinacloudapi.cn/</S>
+                <S N="GalleryUrl">https://gallery.azure.com/</S>
+                <S N="GraphUrl">https://graph.chinacloudapi.cn/</S>
+                <S N="ActiveDirectoryServiceEndpointResourceId">https://management.core.chinacloudapi.cn/</S>
+                <S N="StorageEndpointSuffix">core.chinacloudapi.cn</S>
+                <S N="SqlDatabaseDnsSuffix">.database.chinacloudapi.cn</S>
+                <S N="TrafficManagerDnsSuffix">trafficmanager.cn</S>
+                <S N="AzureKeyVaultDnsSuffix">vault.azure.cn</S>
+                <S N="AzureKeyVaultServiceEndpointResourceId">https://vault.azure.cn</S>
+                <S N="GraphEndpointResourceId">https://graph.chinacloudapi.cn/</S>
+                <Nil N="DataLakeEndpointResourceId" />
+                <S N="BatchEndpointResourceId">https://batch.chinacloudapi.cn/</S>
+                <Nil N="AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix" />
+                <Nil N="AzureDataLakeStoreFileSystemEndpointSuffix" />
+                <S N="AdTenant">Common</S>
+                <S N="ContainerRegistryEndpointSuffix">azurecr.cn</S>
+                <Obj N="VersionProfiles" RefId="3">
+                  <TN RefId="3">
+                    <T>System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <LST />
+                </Obj>
+                <Obj N="ExtendedProperties" RefId="4">
+                  <TN RefId="4">
+                    <T>System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <DCT>
+                    <En>
+                      <S N="Key">OperationalInsightsEndpoint</S>
+                      <S N="Value">https://api.loganalytics.azure.cn/v1</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureSynapseAnalyticsEndpointSuffix</S>
+                      <S N="Value">dev.azuresynapse.azure.cn</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureAnalysisServicesEndpointSuffix</S>
+                      <S N="Value">asazure.chinacloudapi.cn</S>
+                    </En>
+                    <En>
+                      <S N="Key">MicrosoftGraphEndpointResourceId</S>
+                      <S N="Value">https://microsoftgraph.chinacloudapi.cn/</S>
+                    </En>
+                    <En>
+                      <S N="Key">ManagedHsmServiceEndpointSuffix</S>
+                      <S N="Value">managedhsm.azure.cn</S>
+                    </En>
+                    <En>
+                      <S N="Key">OperationalInsightsEndpointResourceId</S>
+                      <S N="Value">https://api.loganalytics.azure.cn</S>
+                    </En>
+                    <En>
+                      <S N="Key">AnalysisServicesEndpointResourceId</S>
+                      <S N="Value">https://region.asazure.chinacloudapi.cn</S>
+                    </En>
+                    <En>
+                      <S N="Key">ManagedHsmServiceEndpointResourceId</S>
+                      <S N="Value">https://managedhsm.azure.cn</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureSynapseAnalyticsEndpointResourceId</S>
+                      <S N="Value">https://dev.azuresynapse.azure.cn</S>
+                    </En>
+                    <En>
+                      <S N="Key">MicrosoftGraphUrl</S>
+                      <S N="Value">https://microsoftgraph.chinacloudapi.cn</S>
+                    </En>
+                    <En>
+                      <S N="Key">ContainerRegistryEndpointResourceId</S>
+                      <S N="Value">https://management.chinacloudapi.cn</S>
+                    </En>
+                  </DCT>
+                </Obj>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">AzureCloud</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <ToString>Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureEnvironment</ToString>
+              <Props>
+                <S N="Name">AzureCloud</S>
+                <S N="Type">Discovered</S>
+                <B N="OnPremise">false</B>
+                <S N="ServiceManagementUrl">https://management.core.windows.net/</S>
+                <S N="ResourceManagerUrl">https://management.azure.com/</S>
+                <S N="ManagementPortalUrl">https://portal.azure.com</S>
+                <S N="PublishSettingsFileUrl">https://go.microsoft.com/fwlink/?LinkID=301775</S>
+                <S N="ActiveDirectoryAuthority">https://login.microsoftonline.com</S>
+                <Nil N="GalleryUrl" />
+                <S N="GraphUrl">https://graph.windows.net/</S>
+                <S N="ActiveDirectoryServiceEndpointResourceId">https://management.core.windows.net/</S>
+                <S N="StorageEndpointSuffix">core.windows.net</S>
+                <S N="SqlDatabaseDnsSuffix">.database.windows.net</S>
+                <S N="TrafficManagerDnsSuffix">trafficmanager.net</S>
+                <S N="AzureKeyVaultDnsSuffix">vault.azure.net</S>
+                <S N="AzureKeyVaultServiceEndpointResourceId">https://vault.azure.net</S>
+                <S N="GraphEndpointResourceId">https://graph.windows.net/</S>
+                <S N="DataLakeEndpointResourceId">https://datalake.azure.net/</S>
+                <S N="BatchEndpointResourceId">https://batch.core.windows.net/</S>
+                <S N="AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix">azuredatalakeanalytics.net</S>
+                <S N="AzureDataLakeStoreFileSystemEndpointSuffix">azuredatalakestore.net</S>
+                <S N="AdTenant">common</S>
+                <S N="ContainerRegistryEndpointSuffix">azurecr.io</S>
+                <Obj N="VersionProfiles" RefId="6">
+                  <TNRef RefId="3" />
+                  <LST />
+                </Obj>
+                <Obj N="ExtendedProperties" RefId="7">
+                  <TNRef RefId="4" />
+                  <DCT>
+                    <En>
+                      <S N="Key">ManagedHsmServiceEndpointResourceId</S>
+                      <S N="Value">https://managedhsm.azure.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">ContainerRegistryEndpointResourceId</S>
+                      <S N="Value">https://management.azure.com</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureAppConfigurationEndpointResourceId</S>
+                      <S N="Value">https://azconfig.io</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzurePurviewEndpointSuffix</S>
+                      <S N="Value">purview.azure.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">ManagedHsmServiceEndpointSuffix</S>
+                      <S N="Value">managedhsm.azure.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">MicrosoftGraphUrl</S>
+                      <S N="Value">https://graph.microsoft.com</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureAttestationServiceEndpointSuffix</S>
+                      <S N="Value">attest.azure.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureSynapseAnalyticsEndpointSuffix</S>
+                      <S N="Value">dev.azuresynapse.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureAnalysisServicesEndpointSuffix</S>
+                      <S N="Value">asazure.windows.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureSynapseAnalyticsEndpointResourceId</S>
+                      <S N="Value">https://dev.azuresynapse.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">OperationalInsightsEndpointResourceId</S>
+                      <S N="Value">https://api.loganalytics.io</S>
+                    </En>
+                    <En>
+                      <S N="Key">AnalysisServicesEndpointResourceId</S>
+                      <S N="Value">https://region.asazure.windows.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzurePurviewEndpointResourceId</S>
+                      <S N="Value">https://purview.azure.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureAppConfigurationEndpointSuffix</S>
+                      <S N="Value">azconfig.io</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureAttestationServiceEndpointResourceId</S>
+                      <S N="Value">https://attest.azure.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">MicrosoftGraphEndpointResourceId</S>
+                      <S N="Value">https://graph.microsoft.com/</S>
+                    </En>
+                    <En>
+                      <S N="Key">OperationalInsightsEndpoint</S>
+                      <S N="Value">https://api.loganalytics.io/v1</S>
+                    </En>
+                  </DCT>
+                </Obj>
+              </Props>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">AzureUSGovernment</S>
+            <Obj N="Value" RefId="8">
+              <TNRef RefId="2" />
+              <ToString>Microsoft.Azure.Commands.Common.Authentication.Abstractions.AzureEnvironment</ToString>
+              <Props>
+                <S N="Name">AzureUSGovernment</S>
+                <S N="Type">Built-in</S>
+                <B N="OnPremise">false</B>
+                <S N="ServiceManagementUrl">https://management.core.usgovcloudapi.net/</S>
+                <S N="ResourceManagerUrl">https://management.usgovcloudapi.net/</S>
+                <S N="ManagementPortalUrl">https://portal.azure.us/</S>
+                <S N="PublishSettingsFileUrl">https://manage.windowsazure.us/publishsettings/index</S>
+                <S N="ActiveDirectoryAuthority">https://login.microsoftonline.us/</S>
+                <S N="GalleryUrl">https://gallery.azure.com/</S>
+                <S N="GraphUrl">https://graph.windows.net/</S>
+                <S N="ActiveDirectoryServiceEndpointResourceId">https://management.core.usgovcloudapi.net/</S>
+                <S N="StorageEndpointSuffix">core.usgovcloudapi.net</S>
+                <S N="SqlDatabaseDnsSuffix">.database.usgovcloudapi.net</S>
+                <S N="TrafficManagerDnsSuffix">usgovtrafficmanager.net</S>
+                <S N="AzureKeyVaultDnsSuffix">vault.usgovcloudapi.net</S>
+                <S N="AzureKeyVaultServiceEndpointResourceId">https://vault.usgovcloudapi.net</S>
+                <S N="GraphEndpointResourceId">https://graph.windows.net/</S>
+                <Nil N="DataLakeEndpointResourceId" />
+                <S N="BatchEndpointResourceId">https://batch.core.usgovcloudapi.net/</S>
+                <Nil N="AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix" />
+                <Nil N="AzureDataLakeStoreFileSystemEndpointSuffix" />
+                <S N="AdTenant">Common</S>
+                <S N="ContainerRegistryEndpointSuffix">azurecr.us</S>
+                <Obj N="VersionProfiles" RefId="9">
+                  <TNRef RefId="3" />
+                  <LST />
+                </Obj>
+                <Obj N="ExtendedProperties" RefId="10">
+                  <TNRef RefId="4" />
+                  <DCT>
+                    <En>
+                      <S N="Key">OperationalInsightsEndpoint</S>
+                      <S N="Value">https://api.loganalytics.us/v1</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureSynapseAnalyticsEndpointSuffix</S>
+                      <S N="Value">dev.azuresynapse.usgovcloudapi.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureAnalysisServicesEndpointSuffix</S>
+                      <S N="Value">asazure.usgovcloudapi.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">MicrosoftGraphEndpointResourceId</S>
+                      <S N="Value">https://graph.microsoft.us/</S>
+                    </En>
+                    <En>
+                      <S N="Key">ManagedHsmServiceEndpointSuffix</S>
+                      <S N="Value">managedhsm.usgovcloudapi.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">OperationalInsightsEndpointResourceId</S>
+                      <S N="Value">https://api.loganalytics.us</S>
+                    </En>
+                    <En>
+                      <S N="Key">AnalysisServicesEndpointResourceId</S>
+                      <S N="Value">https://region.asazure.usgovcloudapi.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">ManagedHsmServiceEndpointResourceId</S>
+                      <S N="Value">https://managedhsm.usgovcloudapi.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">AzureSynapseAnalyticsEndpointResourceId</S>
+                      <S N="Value">https://dev.azuresynapse.usgovcloudapi.net</S>
+                    </En>
+                    <En>
+                      <S N="Key">MicrosoftGraphUrl</S>
+                      <S N="Value">https://graph.microsoft.us</S>
+                    </En>
+                    <En>
+                      <S N="Key">ContainerRegistryEndpointResourceId</S>
+                      <S N="Value">https://management.usgovcloudapi.net</S>
+                    </En>
+                  </DCT>
+                </Obj>
+              </Props>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Obj N="Contexts" RefId="11">
+        <TN RefId="5">
+          <T>System.Collections.Concurrent.ConcurrentDictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContext, Microsoft.Azure.PowerShell.Authentication.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Default</S>
+            <Obj N="Value" RefId="12">
+              <TN RefId="6">
+                <T>Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext</T>
+                <T>System.Object</T>
+              </TN>
+              <ToString>Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext</ToString>
+              <Props>
+                <S N="Name">Microsoft Azure (d2cd2b8a-6d8f-4e4b-85ec-ef98cb93cc76) - 8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3 - JimAdmin@WVDInt.onmicrosoft.com</S>
+                <Obj N="Subscription" RefId="13">
+                  <TN RefId="7">
+                    <T>Microsoft.Azure.Commands.Profile.Models.PSAzureSubscription</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <ToString>d2cd2b8a-6d8f-4e4b-85ec-ef98cb93cc76</ToString>
+                  <Props>
+                    <S N="Name">Microsoft Azure</S>
+                    <S N="Id">d2cd2b8a-6d8f-4e4b-85ec-ef98cb93cc76</S>
+                    <S N="State">Enabled</S>
+                    <S N="SubscriptionId">d2cd2b8a-6d8f-4e4b-85ec-ef98cb93cc76</S>
+                    <S N="TenantId">8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</S>
+                    <S N="HomeTenantId">8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</S>
+                    <Obj N="ManagedByTenantIds" RefId="14">
+                      <TN RefId="8">
+                        <T>System.String[]</T>
+                        <T>System.Array</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <LST />
+                    </Obj>
+                    <Nil N="CurrentStorageAccountName" />
+                    <Obj N="SubscriptionPolicies" RefId="15">
+                      <TN RefId="9">
+                        <T>Microsoft.Azure.Commands.Profile.Models.PSAzureSubscriptionPolicy</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <ToString>{_x000D__x000A_  "LocationPlacementId": "Public_2014-09-01",_x000D__x000A_  "QuotaId": "CSP_2015-05-01",_x000D__x000A_  "SpendingLimit": "Off"_x000D__x000A_}</ToString>
+                      <Props>
+                        <S N="LocationPlacementId">Public_2014-09-01</S>
+                        <S N="QuotaId">CSP_2015-05-01</S>
+                        <S N="SpendingLimit">Off</S>
+                      </Props>
+                    </Obj>
+                    <Obj N="ExtendedProperties" RefId="16">
+                      <TN RefId="10">
+                        <T>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</T>
+                        <T>System.Object</T>
+                      </TN>
+                      <DCT>
+                        <En>
+                          <S N="Key">SubscriptionPolices</S>
+                          <S N="Value">{"locationPlacementId":"Public_2014-09-01","quotaId":"CSP_2015-05-01","spendingLimit":"Off"}</S>
+                        </En>
+                        <En>
+                          <S N="Key">AuthorizationSource</S>
+                          <S N="Value">RoleBased</S>
+                        </En>
+                        <En>
+                          <S N="Key">HomeTenant</S>
+                          <S N="Value">8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</S>
+                        </En>
+                        <En>
+                          <S N="Key">Environment</S>
+                          <S N="Value">AzureCloud</S>
+                        </En>
+                        <En>
+                          <S N="Key">Tenants</S>
+                          <S N="Value">8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</S>
+                        </En>
+                        <En>
+                          <S N="Key">Account</S>
+                          <S N="Value">JimAdmin@WVDInt.onmicrosoft.com</S>
+                        </En>
+                      </DCT>
+                    </Obj>
+                    <Nil N="CurrentStorageAccount" />
+                    <S N="AuthorizationSource">RoleBased</S>
+                    <Nil N="Tags" />
+                  </Props>
+                </Obj>
+                <Obj N="Account" RefId="17">
+                  <TN RefId="11">
+                    <T>Microsoft.Azure.Commands.Profile.Models.PSAzureRmAccount</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <ToString>JimAdmin@WVDInt.onmicrosoft.com</ToString>
+                  <Props>
+                    <S N="Id">JimAdmin@WVDInt.onmicrosoft.com</S>
+                    <S N="Type">User</S>
+                    <Obj N="Tenants" RefId="18">
+                      <TNRef RefId="3" />
+                      <LST>
+                        <S>8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</S>
+                      </LST>
+                    </Obj>
+                    <Nil N="AccessToken" />
+                    <Nil N="Credential" />
+                    <Obj N="TenantMap" RefId="19">
+                      <TNRef RefId="10" />
+                      <DCT />
+                    </Obj>
+                    <Nil N="CertificateThumbprint" />
+                    <Obj N="ExtendedProperties" RefId="20">
+                      <TNRef RefId="10" />
+                      <DCT>
+                        <En>
+                          <S N="Key">Tenants</S>
+                          <S N="Value">8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</S>
+                        </En>
+                        <En>
+                          <S N="Key">HomeAccountId</S>
+                          <S N="Value">5933f20c-5691-42f6-af3e-3211348d47dc.8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</S>
+                        </En>
+                        <En>
+                          <S N="Key">Subscriptions</S>
+                          <S N="Value">d2cd2b8a-6d8f-4e4b-85ec-ef98cb93cc76</S>
+                        </En>
+                      </DCT>
+                    </Obj>
+                  </Props>
+                </Obj>
+                <Obj N="Environment" RefId="21">
+                  <TN RefId="12">
+                    <T>Microsoft.Azure.Commands.Profile.Models.PSAzureEnvironment</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <ToString>AzureCloud</ToString>
+                  <Props>
+                    <S N="Name">AzureCloud</S>
+                    <S N="Type">User-defined</S>
+                    <B N="EnableAdfsAuthentication">false</B>
+                    <B N="OnPremise">false</B>
+                    <S N="ActiveDirectoryServiceEndpointResourceId">https://management.core.windows.net/</S>
+                    <S N="AdTenant">common</S>
+                    <S N="GalleryUrl">https://gallery.azure.com/</S>
+                    <S N="ManagementPortalUrl">https://portal.azure.com</S>
+                    <S N="ServiceManagementUrl">https://management.core.windows.net/</S>
+                    <S N="PublishSettingsFileUrl">https://go.microsoft.com/fwlink/?LinkID=301775</S>
+                    <S N="ResourceManagerUrl">https://management.azure.com/</S>
+                    <S N="SqlDatabaseDnsSuffix">.database.windows.net</S>
+                    <S N="StorageEndpointSuffix">core.windows.net</S>
+                    <S N="ActiveDirectoryAuthority">https://login.microsoftonline.com</S>
+                    <S N="GraphUrl">https://graph.windows.net/</S>
+                    <S N="GraphEndpointResourceId">https://graph.windows.net/</S>
+                    <S N="TrafficManagerDnsSuffix">trafficmanager.net</S>
+                    <S N="AzureKeyVaultDnsSuffix">vault.azure.net</S>
+                    <S N="DataLakeEndpointResourceId">https://datalake.azure.net/</S>
+                    <S N="AzureDataLakeStoreFileSystemEndpointSuffix">azuredatalakestore.net</S>
+                    <S N="AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix">azuredatalakeanalytics.net</S>
+                    <S N="AzureKeyVaultServiceEndpointResourceId">https://vault.azure.net</S>
+                    <S N="ContainerRegistryEndpointSuffix">azurecr.io</S>
+                    <S N="AzureOperationalInsightsEndpointResourceId">https://api.loganalytics.io</S>
+                    <S N="AzureOperationalInsightsEndpoint">https://api.loganalytics.io/v1</S>
+                    <S N="AzureAnalysisServicesEndpointSuffix">asazure.windows.net</S>
+                    <S N="AnalysisServicesEndpointResourceId">https://region.asazure.windows.net</S>
+                    <S N="AzureAttestationServiceEndpointSuffix">attest.azure.net</S>
+                    <S N="AzureAttestationServiceEndpointResourceId">https://attest.azure.net</S>
+                    <S N="AzureSynapseAnalyticsEndpointSuffix">dev.azuresynapse.net</S>
+                    <S N="AzureSynapseAnalyticsEndpointResourceId">https://dev.azuresynapse.net</S>
+                    <Obj N="VersionProfiles" RefId="22">
+                      <TNRef RefId="3" />
+                      <LST />
+                    </Obj>
+                    <Obj N="ExtendedProperties" RefId="23">
+                      <TNRef RefId="10" />
+                      <DCT>
+                        <En>
+                          <S N="Key">ManagedHsmServiceEndpointResourceId</S>
+                          <S N="Value">https://managedhsm.azure.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">ContainerRegistryEndpointResourceId</S>
+                          <S N="Value">https://management.azure.com</S>
+                        </En>
+                        <En>
+                          <S N="Key">AzureAppConfigurationEndpointResourceId</S>
+                          <S N="Value">https://azconfig.io</S>
+                        </En>
+                        <En>
+                          <S N="Key">AzurePurviewEndpointSuffix</S>
+                          <S N="Value">purview.azure.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">ManagedHsmServiceEndpointSuffix</S>
+                          <S N="Value">managedhsm.azure.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">MicrosoftGraphUrl</S>
+                          <S N="Value">https://graph.microsoft.com</S>
+                        </En>
+                        <En>
+                          <S N="Key">AzureAttestationServiceEndpointSuffix</S>
+                          <S N="Value">attest.azure.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">AzureSynapseAnalyticsEndpointSuffix</S>
+                          <S N="Value">dev.azuresynapse.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">AzureAnalysisServicesEndpointSuffix</S>
+                          <S N="Value">asazure.windows.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">AzureSynapseAnalyticsEndpointResourceId</S>
+                          <S N="Value">https://dev.azuresynapse.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">OperationalInsightsEndpointResourceId</S>
+                          <S N="Value">https://api.loganalytics.io</S>
+                        </En>
+                        <En>
+                          <S N="Key">AnalysisServicesEndpointResourceId</S>
+                          <S N="Value">https://region.asazure.windows.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">AzurePurviewEndpointResourceId</S>
+                          <S N="Value">https://purview.azure.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">AzureAppConfigurationEndpointSuffix</S>
+                          <S N="Value">azconfig.io</S>
+                        </En>
+                        <En>
+                          <S N="Key">AzureAttestationServiceEndpointResourceId</S>
+                          <S N="Value">https://attest.azure.net</S>
+                        </En>
+                        <En>
+                          <S N="Key">MicrosoftGraphEndpointResourceId</S>
+                          <S N="Value">https://graph.microsoft.com/</S>
+                        </En>
+                        <En>
+                          <S N="Key">OperationalInsightsEndpoint</S>
+                          <S N="Value">https://api.loganalytics.io/v1</S>
+                        </En>
+                      </DCT>
+                    </Obj>
+                    <S N="BatchEndpointResourceId">https://batch.core.windows.net/</S>
+                  </Props>
+                </Obj>
+                <Obj N="Tenant" RefId="24">
+                  <TN RefId="13">
+                    <T>Microsoft.Azure.Commands.Profile.Models.PSAzureTenant</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <ToString>8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</ToString>
+                  <Props>
+                    <S N="Id">8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</S>
+                    <S N="TenantId">8ff4448a-b2a7-4a0c-8e9c-28d7555d1dd3</S>
+                    <Obj N="ExtendedProperties" RefId="25">
+                      <TNRef RefId="10" />
+                      <DCT>
+                        <En>
+                          <S N="Key">TenantCategory</S>
+                          <S N="Value">Home</S>
+                        </En>
+                        <En>
+                          <S N="Key">CountryCode</S>
+                          <S N="Value">US</S>
+                        </En>
+                        <En>
+                          <S N="Key">DisplayName</S>
+                          <S N="Value">WVDInt</S>
+                        </En>
+                        <En>
+                          <S N="Key">DefaultDomain</S>
+                          <S N="Value">avd.tools</S>
+                        </En>
+                        <En>
+                          <S N="Key">Domains</S>
+                          <S N="Value">WVDInt.mail.onmicrosoft.com,WVDInt.onmicrosoft.com,avd.tools</S>
+                        </En>
+                        <En>
+                          <S N="Key">TenantType</S>
+                          <S N="Value">AAD</S>
+                        </En>
+                        <En>
+                          <S N="Key">Directory</S>
+                          <S N="Value">WVDInt.onmicrosoft.com</S>
+                        </En>
+                      </DCT>
+                    </Obj>
+                    <S N="TenantCategory">Home</S>
+                    <Nil N="Country" />
+                    <S N="CountryCode">US</S>
+                    <S N="Name">WVDInt</S>
+                    <Obj N="Domains" RefId="26">
+                      <TNRef RefId="8" />
+                      <LST>
+                        <S>WVDInt.mail.onmicrosoft.com</S>
+                        <S>WVDInt.onmicrosoft.com</S>
+                        <S>avd.tools</S>
+                      </LST>
+                    </Obj>
+                    <S N="DefaultDomain">avd.tools</S>
+                    <S N="TenantType">AAD</S>
+                    <Nil N="TenantBrandingLogoUrl" />
+                  </Props>
+                </Obj>
+                <Nil N="TokenCache" />
+                <Nil N="VersionProfile" />
+                <Obj N="ExtendedProperties" RefId="27">
+                  <TNRef RefId="10" />
+                  <DCT />
+                </Obj>
+              </Props>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <B N="ShouldRefreshContextsFromCache">false</B>
+      <Nil N="ProfilePath" />
+      <Ref N="DefaultContext" RefId="12" />
+      <Obj N="Environments" RefId="28">
+        <TN RefId="14">
+          <T>System.Collections.Generic.List`1[[Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureEnvironment, Microsoft.Azure.PowerShell.Authentication.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <Ref RefId="2" />
+          <Ref RefId="5" />
+          <Ref RefId="8" />
+        </LST>
+      </Obj>
+      <Obj N="Subscriptions" RefId="29">
+        <TN RefId="15">
+          <T>System.Linq.Enumerable+SelectIListIterator`2[[Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContext, Microsoft.Azure.PowerShell.Authentication.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35],[Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureSubscription, Microsoft.Azure.PowerShell.Authentication.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+          <T>System.Linq.Enumerable+Iterator`1[[Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureSubscription, Microsoft.Azure.PowerShell.Authentication.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+          <T>System.Object</T>
+        </TN>
+        <IE>
+          <Ref RefId="13" />
+        </IE>
+        <Props>
+          <Nil N="Current" />
+        </Props>
+      </Obj>
+      <Obj N="Accounts" RefId="30">
+        <TN RefId="16">
+          <T>System.Linq.Enumerable+SelectIListIterator`2[[Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContext, Microsoft.Azure.PowerShell.Authentication.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35],[Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureAccount, Microsoft.Azure.PowerShell.Authentication.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+          <T>System.Linq.Enumerable+Iterator`1[[Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureAccount, Microsoft.Azure.PowerShell.Authentication.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+          <T>System.Object</T>
+        </TN>
+        <IE>
+          <Ref RefId="17" />
+        </IE>
+        <Props>
+          <Nil N="Current" />
+        </Props>
+      </Obj>
+      <Obj N="ExtendedProperties" RefId="31">
+        <TNRef RefId="4" />
+        <DCT />
+      </Obj>
+    </Props>
+  </Obj>
+</Objs>
